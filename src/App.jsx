@@ -1,13 +1,21 @@
+import { useState } from 'react'
 import './App.css'
-import TodoForm from './Components/TodoForm'
+import TodoCreate from './Components/TodoCreate'
 import TodoList from './Components/TodoList'
 
 function App() {
+
+  const [todos, setTodos] = useState([])
+
+  const createTodo = (newTodo) => {
+    setTodos([...todos, newTodo])
+  }
+
   return (
     <div className="app">
       <h1>Todo Listem</h1>
-      <TodoForm />
-      <TodoList />
+      <TodoCreate onCreateTodo={createTodo} />
+      <TodoList todos={todos} />
     </div>
   )
 }

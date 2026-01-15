@@ -1,9 +1,12 @@
 import Todo from './Todo'
 
-function TodoList() {
+function TodoList({ todos }) {
+
   return (
     <div>
-      <Todo />
+      {todos && todos.map((todo) =>
+        <Todo key={todo.id} todo={todo} />
+      )}
     </div>
   )
 }
