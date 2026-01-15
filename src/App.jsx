@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import TodoForm from './Components/TodoForm'
+import TodoList from './Components/TodoList'
 
 function App() {
-
   return (
-    <>
-
-    </>
+    <div className="app">
+      <h1>Todo Listem</h1>
+      <TodoForm />
+      <TodoList />
+    </div>
   )
 }
 
