@@ -71,3 +71,65 @@
   gap: 10px;
   cursor: pointer;
 }
+
+.edit-input {
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 320px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.08);
+  background-color: #fff;
+}
+
+@media (max-width: 480px) {
+  .todo-item {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+  }
+
+  .edit-input {
+    max-width: 100%;
+  }
+}
+
+.todo-actions {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.edit-input {
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 320px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.08);
+  background-color: #fff;
+}
+
+@media (max-width: 480px) {
+  .todo-item {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+  }
+
+  .edit-input {
+    max-width: 100%;
+  }
+}
