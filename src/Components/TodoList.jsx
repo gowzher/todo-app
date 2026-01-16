@@ -1,11 +1,11 @@
 import Todo from './Todo'
 
-function TodoList({ todos }) {
+function TodoList({ todos, onDeleteTodo }) {
 
   return (
     <div>
       {todos && todos.map((todo) =>
-        <Todo key={todo.id} todo={todo} />
+        <Todo key={todo.id} todo={todo} onDeleteTodo={onDeleteTodo} />
       )}
     </div>
   )
