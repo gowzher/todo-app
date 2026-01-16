@@ -1,11 +1,21 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import TodoCreate from './Components/TodoCreate'
 import TodoList from './Components/TodoList'
 
 function App() {
 
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(() => {
+    const savedTodos = localStorage.getItem("todos");
+    if (savedTodos) {
+      return JSON.parse(savedTodos); // String olarak saklanan veriyi diziye çevirir
+    }
+    return []; // Eğer storage boşsa boş dizi ile başla
+  });
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]); // [todos] bağımlılığı sayesinde liste her değiştiğinde çalışır
 
   const createTodo = (newTodo) => {
     setTodos([...todos, newTodo])
